@@ -1,0 +1,9 @@
+echo "checking out swift ..."
+git clone ssh://git.apple.com/git/puzzlebox/swift.git
+cd swift
+git svn init svn+ssh://xin_tong@svn.apple.com/svn/klondike/shiny-project/shiny/trunk
+git config svn-remote.svn.fetch :refs/remotes/origin/master
+git svn rebase -l
+cd ..
+echo "checking out swift performance test suite ..."
+git clone ssh://git.apple.com/git/puzzlebox/swift-test-suite.git swift/benchmark/PerfTestSuite

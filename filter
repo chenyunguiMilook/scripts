@@ -1,0 +1,1002 @@
+# Filter: apple-commits-apple-swift-commits
+if anyof (header :contains "To" "shiny-commits@group.apple.com", header :contains "CC" "shiny-commits@group.apple.com") {
+    fileinto "Solon";
+    stop;
+}
+# Filter: apple-commits-apple-llvm-git-commits
+if anyof (header :contains "To" "embedded-compiler-git-commits@group.apple.com", header :contains "CC" "embedded-compiler-git-commits@group.apple.com") {
+    fileinto "ECC Git Commits";
+    stop;
+}
+# Filter: apple-commits-apple-llvm-svn-commits
+if anyof (header :contains "To" "embedded-compiler-commits@group.apple.com", header :contains "CC" "embedded-compiler-commits@group.apple.com") {
+    fileinto "ECC Commits";
+    stop;
+}
+# Filter: apple-commits-apple-llvm-ecc
+if anyof (header :contains "To" "embedded-compiler-confidential@group.apple.com", header :contains "CC" "embedded-compiler-confidential@group.apple.com") {
+    fileinto "ECC";
+    stop;
+}
+# Filter: apple-commits-apple-llvm-test
+if anyof (header :contains "To" "dt-llvm-test@group.apple.com", header :contains "CC" "dt-llvm-test@group.apple.com") {
+    fileinto "LLVM Perf";
+    stop;
+}
+# Filter: apple-compiler-lists-Apple Clang Users
+if anyof (header :contains "To" "apple-clang-users@group.apple.com", header :contains "CC" "apple-clang-users@group.apple.com") {
+    fileinto "Apple Compiler Lists";
+    stop;
+}
+# Filter: apple-compiler-lists-Apple Swift Users
+if anyof (header :contains "To" "apple-swift-users@group.apple.com", header :contains "CC" "apple-swift-users@group.apple.com") {
+    fileinto "Apple Compiler Lists";
+    stop;
+}
+# Filter: apple-compiler-lists-Apple Compiler Group
+if anyof (header :contains "To" "compiler-group@group.apple.com", header :contains "CC" "compiler-group@group.apple.com") {
+    fileinto "ECC";
+    stop;
+}
+# Filter: apple-compiler-lists-Compiler Test Results
+if anyof (header :contains "To" "compiler-test-results@group.apple.com", header :contains "CC" "compiler-test-results@group.apple.com") {
+    fileinto "Compiler Test Results";
+    stop;
+}
+# Filter: apple-radar-radar
+if anyof (header :contains "From" "radar@apple.com") {
+    fileinto "Radar";
+    stop;
+}
+# Filter: apple-builds-AppleTV Copper Builds
+if anyof (header :contains "To" "AppleTV-builds-copper@group.apple.com", header :contains "CC" "AppleTV-builds-copper@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: apple-builds-Aspen iTunes
+if anyof (header :contains "To" "aspen-itunes-current@group.apple.com", header :contains "CC" "aspen-itunes-current@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: apple-builds-Bondi Remote NFA
+if anyof (header :contains "To" "bondi_remote_nfa@group.apple.com", header :contains "CC" "bondi_remote_nfa@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: apple-builds-CSG
+if anyof (header :contains "To" "csg@group.apple.com", header :contains "CC" "csg@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: apple-builds-CSG
+if anyof (header :contains "To" "seg-cad@group.apple.com", header :contains "CC" "seg-cad@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: apple-builds-DT Build Status
+if anyof (header :contains "To" "dt-build-status@group.apple.com", header :contains "CC" "dt-build-status@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: apple-builds-Ebuild
+if anyof (header :contains "To" "ebuild@group.apple.com", header :contains "CC" "ebuild@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: apple-builds-Gala Builds
+if anyof (header :contains "To" "gala-builds@group.apple.com", header :contains "CC" "gala-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: apple-builds-Monarch iPhone Silo
+if anyof (header :contains "To" "monarch-iphone-silo@group.apple.com", header :contains "CC" "monarch-iphone-silo@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: apple-builds-Muir Quicklooks
+if anyof (header :contains "To" "dt-muir-quicklooks@group.apple.com", header :contains "CC" "dt-muir-quicklooks@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: apple-builds-Pepper Dev
+if anyof (header :contains "To" "pepper-dev@group.apple.com", header :contains "CC" "pepper-dev@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: apple-builds-Serenity Builds
+if anyof (header :contains "To" "serenity-be@group.apple.com", header :contains "CC" "serenity-be@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: apple-builds-Syrah Falls
+if anyof (header :contains "To" "falls-builds@group.apple.com", header :contains "CC" "falls-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: apple-builds-iTunes Releases
+if anyof (header :contains "To" "itunesreleases@group.apple.com", header :contains "CC" "itunesreleases@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: apple-builds-iTunes Releases
+if anyof (header :contains "To" "itunesreleases@group.apple.com", header :contains "CC" "itunesreleases@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: bondi-UI Builds
+if anyof (header :contains "To" "bondi-ui-builds@group.apple.com", header :contains "CC" "bondi-ui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: bondi-SDK Builds
+if anyof (header :contains "To" "bondi-sdk@group.apple.com", header :contains "CC" "bondi-sdk@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: bondi-NonUI Builds
+if anyof (header :contains "To" "bondi-nonui-builds@group.apple.com", header :contains "CC" "bondi-nonui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: bondi-Reports
+if anyof (header :contains "To" "bondi-reports@group.apple.com", header :contains "CC" "bondi-reports@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: boulder-UI Builds
+if anyof (header :contains "To" "boulder-ui-builds@group.apple.com", header :contains "CC" "boulder-ui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: boulder-SDK Builds
+if anyof (header :contains "To" "boulder-sdk@group.apple.com", header :contains "CC" "boulder-sdk@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: boulder-NonUI Builds
+if anyof (header :contains "To" "boulder-nonui-builds@group.apple.com", header :contains "CC" "boulder-nonui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: boulder-Reports
+if anyof (header :contains "To" "boulder-reports@group.apple.com", header :contains "CC" "boulder-reports@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: copper-UI Builds
+if anyof (header :contains "To" "copper-ui-builds@group.apple.com", header :contains "CC" "copper-ui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: copper-SDK Builds
+if anyof (header :contains "To" "copper-sdk@group.apple.com", header :contains "CC" "copper-sdk@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: copper-NonUI Builds
+if anyof (header :contains "To" "copper-nonui-builds@group.apple.com", header :contains "CC" "copper-nonui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: copper-Reports
+if anyof (header :contains "To" "copper-reports@group.apple.com", header :contains "CC" "copper-reports@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: donner-UI Builds
+if anyof (header :contains "To" "donner-ui-builds@group.apple.com", header :contains "CC" "donner-ui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: donner-SDK Builds
+if anyof (header :contains "To" "donner-sdk@group.apple.com", header :contains "CC" "donner-sdk@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: donner-NonUI Builds
+if anyof (header :contains "To" "donner-nonui-builds@group.apple.com", header :contains "CC" "donner-nonui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: donner-Reports
+if anyof (header :contains "To" "donner-reports@group.apple.com", header :contains "CC" "donner-reports@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: eagle-UI Builds
+if anyof (header :contains "To" "eagle-ui-builds@group.apple.com", header :contains "CC" "eagle-ui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: eagle-SDK Builds
+if anyof (header :contains "To" "eagle-sdk@group.apple.com", header :contains "CC" "eagle-sdk@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: eagle-NonUI Builds
+if anyof (header :contains "To" "eagle-nonui-builds@group.apple.com", header :contains "CC" "eagle-nonui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: eagle-Reports
+if anyof (header :contains "To" "eagle-reports@group.apple.com", header :contains "CC" "eagle-reports@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: monarch-UI Builds
+if anyof (header :contains "To" "monarch-ui-builds@group.apple.com", header :contains "CC" "monarch-ui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: monarch-SDK Builds
+if anyof (header :contains "To" "monarch-sdk@group.apple.com", header :contains "CC" "monarch-sdk@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: monarch-NonUI Builds
+if anyof (header :contains "To" "monarch-nonui-builds@group.apple.com", header :contains "CC" "monarch-nonui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: monarch-Reports
+if anyof (header :contains "To" "monarch-reports@group.apple.com", header :contains "CC" "monarch-reports@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: monarchtide-UI Builds
+if anyof (header :contains "To" "monarchtide-ui-builds@group.apple.com", header :contains "CC" "monarchtide-ui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: monarchtide-SDK Builds
+if anyof (header :contains "To" "monarchtide-sdk@group.apple.com", header :contains "CC" "monarchtide-sdk@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: monarchtide-NonUI Builds
+if anyof (header :contains "To" "monarchtide-nonui-builds@group.apple.com", header :contains "CC" "monarchtide-nonui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: monarchtide-Reports
+if anyof (header :contains "To" "monarchtide-reports@group.apple.com", header :contains "CC" "monarchtide-reports@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: okemo-UI Builds
+if anyof (header :contains "To" "okemo-ui-builds@group.apple.com", header :contains "CC" "okemo-ui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: okemo-SDK Builds
+if anyof (header :contains "To" "okemo-sdk@group.apple.com", header :contains "CC" "okemo-sdk@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: okemo-NonUI Builds
+if anyof (header :contains "To" "okemo-nonui-builds@group.apple.com", header :contains "CC" "okemo-nonui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: okemo-Reports
+if anyof (header :contains "To" "okemo-reports@group.apple.com", header :contains "CC" "okemo-reports@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: skihill-UI Builds
+if anyof (header :contains "To" "skihill-ui-builds@group.apple.com", header :contains "CC" "skihill-ui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: skihill-SDK Builds
+if anyof (header :contains "To" "skihill-sdk@group.apple.com", header :contains "CC" "skihill-sdk@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: skihill-NonUI Builds
+if anyof (header :contains "To" "skihill-nonui-builds@group.apple.com", header :contains "CC" "skihill-nonui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: skihill-Reports
+if anyof (header :contains "To" "skihill-reports@group.apple.com", header :contains "CC" "skihill-reports@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: tenaya-UI Builds
+if anyof (header :contains "To" "tenaya-ui-builds@group.apple.com", header :contains "CC" "tenaya-ui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: tenaya-SDK Builds
+if anyof (header :contains "To" "tenaya-sdk@group.apple.com", header :contains "CC" "tenaya-sdk@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: tenaya-NonUI Builds
+if anyof (header :contains "To" "tenaya-nonui-builds@group.apple.com", header :contains "CC" "tenaya-nonui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: tenaya-Reports
+if anyof (header :contains "To" "tenaya-reports@group.apple.com", header :contains "CC" "tenaya-reports@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: union-UI Builds
+if anyof (header :contains "To" "union-ui-builds@group.apple.com", header :contains "CC" "union-ui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: union-SDK Builds
+if anyof (header :contains "To" "union-sdk@group.apple.com", header :contains "CC" "union-sdk@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: union-NonUI Builds
+if anyof (header :contains "To" "union-nonui-builds@group.apple.com", header :contains "CC" "union-nonui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: union-Reports
+if anyof (header :contains "To" "union-reports@group.apple.com", header :contains "CC" "union-reports@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: whitetail-UI Builds
+if anyof (header :contains "To" "whitetail-ui-builds@group.apple.com", header :contains "CC" "whitetail-ui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: whitetail-SDK Builds
+if anyof (header :contains "To" "whitetail-sdk@group.apple.com", header :contains "CC" "whitetail-sdk@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: whitetail-NonUI Builds
+if anyof (header :contains "To" "whitetail-nonui-builds@group.apple.com", header :contains "CC" "whitetail-nonui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: whitetail-Reports
+if anyof (header :contains "To" "whitetail-reports@group.apple.com", header :contains "CC" "whitetail-reports@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: castlerock-UI Builds
+if anyof (header :contains "To" "castlerock-ui-builds@group.apple.com", header :contains "CC" "castlerock-ui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: castlerock-SDK Builds
+if anyof (header :contains "To" "castlerock-sdk@group.apple.com", header :contains "CC" "castlerock-sdk@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: castlerock-NonUI Builds
+if anyof (header :contains "To" "castlerock-nonui-builds@group.apple.com", header :contains "CC" "castlerock-nonui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: castlerock-Reports
+if anyof (header :contains "To" "castlerock-reports@group.apple.com", header :contains "CC" "castlerock-reports@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: open-source-llvm-llvm-commits
+if anyof (header :contains "To" "llvm-commits@cs.uiuc.edu", header :contains "CC" "llvm-commits@cs.uiuc.edu") {
+    fileinto "LLVM Commits";
+    stop;
+}
+# Filter: open-source-llvm-llvm-dev
+if anyof (header :contains "To" "llvmdev@cs.uiuc.edu", header :contains "CC" "llvmdev@cs.uiuc.edu") {
+    fileinto "LLVM Dev";
+    stop;
+}
+# Filter: open-source-llvm-cfe-commits
+if anyof (header :contains "To" "cfe-commits@cs.uiuc.edu", header :contains "CC" "cfe-commits@cs.uiuc.edu") {
+    fileinto "Clang Commits";
+    stop;
+}
+# Filter: open-source-llvm-cfe-dev
+if anyof (header :contains "To" "cfe-dev@cs.uiuc.edu", header :contains "CC" "cfe-dev@cs.uiuc.edu") {
+    fileinto "Clang Dev";
+    stop;
+}
+# Filter: open-source-llvm-llvm-bugs
+if anyof (header :contains "To" "llvmbugs@cs.uiuc.edu", header :contains "CC" "llvmbugs@cs.uiuc.edu") {
+    fileinto "LLVM Bugs";
+    stop;
+}
+# Filter: apple-misc-lists-AuthKit Help
+if anyof (header :contains "To" "AuthKit-Help@group.apple.com", header :contains "CC" "AuthKit-Help@group.apple.com") {
+    fileinto "Lists";
+    stop;
+}
+# Filter: apple-misc-lists-Bondi Help
+if anyof (header :contains "To" "bondi-help@group.apple.com", header :contains "CC" "bondi-help@group.apple.com") {
+    fileinto "Lists";
+    stop;
+}
+# Filter: apple-misc-lists-Monarch Help
+if anyof (header :contains "To" "monarch-help@group.apple.com", header :contains "CC" "monarch-help@group.apple.com") {
+    fileinto "Lists";
+    stop;
+}
+# Filter: apple-misc-lists-Monarch Home
+if anyof (header :contains "To" "monarch-home@group.apple.com", header :contains "CC" "monarch-home@group.apple.com") {
+    fileinto "Lists";
+    stop;
+}
+# Filter: apple-misc-lists-Monarch Tide Help
+if anyof (header :contains "To" "monarchtide-help@group.apple.com", header :contains "CC" "monarchtide-help@group.apple.com") {
+    fileinto "Lists";
+    stop;
+}
+# Filter: apple-misc-lists-Purple Motion Dev
+if anyof (header :contains "To" "purple-motion-dev@group.apple.com", header :contains "CC" "purple-motion-dev@group.apple.com") {
+    fileinto "Lists";
+    stop;
+}
+# Filter: apple-misc-lists-Sandboxing Help
+if anyof (header :contains "To" "sandboxing-team@group.apple.com", header :contains "CC" "sandboxing-team@group.apple.com") {
+    fileinto "Lists";
+    stop;
+}
+# Filter: apple-misc-lists-Stowe Home
+if anyof (header :contains "To" "stowe-copper-home@group.apple.com", header :contains "CC" "stowe-copper-home@group.apple.com") {
+    fileinto "Lists";
+    stop;
+}
+# Filter: apple-misc-lists-Whitetail Help
+if anyof (header :contains "To" "whitetail-help@group.apple.com", header :contains "CC" "whitetail-help@group.apple.com") {
+    fileinto "Lists";
+    stop;
+}
+# Filter: apple-commits-apple-swift-commits
+if anyof (header :contains "To" "shiny-commits@group.apple.com", header :contains "CC" "shiny-commits@group.apple.com") {
+    fileinto "Solon";
+    stop;
+}
+# Filter: apple-commits-apple-llvm-git-commits
+if anyof (header :contains "To" "embedded-compiler-git-commits@group.apple.com", header :contains "CC" "embedded-compiler-git-commits@group.apple.com") {
+    fileinto "ECC Git Commits";
+    stop;
+}
+# Filter: apple-commits-apple-llvm-svn-commits
+if anyof (header :contains "To" "embedded-compiler-commits@group.apple.com", header :contains "CC" "embedded-compiler-commits@group.apple.com") {
+    fileinto "ECC Commits";
+    stop;
+}
+# Filter: apple-commits-apple-llvm-ecc
+if anyof (header :contains "To" "embedded-compiler-confidential@group.apple.com", header :contains "CC" "embedded-compiler-confidential@group.apple.com") {
+    fileinto "ECC";
+    stop;
+}
+# Filter: apple-commits-apple-llvm-test
+if anyof (header :contains "To" "dt-llvm-test@group.apple.com", header :contains "CC" "dt-llvm-test@group.apple.com") {
+    fileinto "LLVM Perf";
+    stop;
+}
+# Filter: apple-compiler-lists-Apple Clang Users
+if anyof (header :contains "To" "apple-clang-users@group.apple.com", header :contains "CC" "apple-clang-users@group.apple.com") {
+    fileinto "Apple Compiler Lists";
+    stop;
+}
+# Filter: apple-compiler-lists-Apple Swift Users
+if anyof (header :contains "To" "apple-swift-users@group.apple.com", header :contains "CC" "apple-swift-users@group.apple.com") {
+    fileinto "Apple Compiler Lists";
+    stop;
+}
+# Filter: apple-compiler-lists-Apple Compiler Group
+if anyof (header :contains "To" "compiler-group@group.apple.com", header :contains "CC" "compiler-group@group.apple.com") {
+    fileinto "ECC";
+    stop;
+}
+# Filter: apple-compiler-lists-Compiler Test Results
+if anyof (header :contains "To" "compiler-test-results@group.apple.com", header :contains "CC" "compiler-test-results@group.apple.com") {
+    fileinto "Compiler Test Results";
+    stop;
+}
+# Filter: apple-radar-radar
+if anyof (header :contains "From" "radar@apple.com") {
+    fileinto "Radar";
+    stop;
+}
+# Filter: apple-builds-AppleTV Copper Builds
+if anyof (header :contains "To" "AppleTV-builds-copper@group.apple.com", header :contains "CC" "AppleTV-builds-copper@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: apple-builds-Aspen iTunes
+if anyof (header :contains "To" "aspen-itunes-current@group.apple.com", header :contains "CC" "aspen-itunes-current@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: apple-builds-Bondi Remote NFA
+if anyof (header :contains "To" "bondi_remote_nfa@group.apple.com", header :contains "CC" "bondi_remote_nfa@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: apple-builds-CSG
+if anyof (header :contains "To" "csg@group.apple.com", header :contains "CC" "csg@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: apple-builds-CSG
+if anyof (header :contains "To" "seg-cad@group.apple.com", header :contains "CC" "seg-cad@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: apple-builds-DT Build Status
+if anyof (header :contains "To" "dt-build-status@group.apple.com", header :contains "CC" "dt-build-status@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: apple-builds-Ebuild
+if anyof (header :contains "To" "ebuild@group.apple.com", header :contains "CC" "ebuild@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: apple-builds-Gala Builds
+if anyof (header :contains "To" "gala-builds@group.apple.com", header :contains "CC" "gala-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: apple-builds-Monarch iPhone Silo
+if anyof (header :contains "To" "monarch-iphone-silo@group.apple.com", header :contains "CC" "monarch-iphone-silo@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: apple-builds-Muir Quicklooks
+if anyof (header :contains "To" "dt-muir-quicklooks@group.apple.com", header :contains "CC" "dt-muir-quicklooks@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: apple-builds-Pepper Dev
+if anyof (header :contains "To" "pepper-dev@group.apple.com", header :contains "CC" "pepper-dev@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: apple-builds-Serenity Builds
+if anyof (header :contains "To" "serenity-be@group.apple.com", header :contains "CC" "serenity-be@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: apple-builds-Syrah Falls
+if anyof (header :contains "To" "falls-builds@group.apple.com", header :contains "CC" "falls-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: apple-builds-iTunes Releases
+if anyof (header :contains "To" "itunesreleases@group.apple.com", header :contains "CC" "itunesreleases@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: apple-builds-iTunes Releases
+if anyof (header :contains "To" "itunesreleases@group.apple.com", header :contains "CC" "itunesreleases@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: bondi-UI Builds
+if anyof (header :contains "To" "bondi-ui-builds@group.apple.com", header :contains "CC" "bondi-ui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: bondi-SDK Builds
+if anyof (header :contains "To" "bondi-sdk@group.apple.com", header :contains "CC" "bondi-sdk@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: bondi-NonUI Builds
+if anyof (header :contains "To" "bondi-nonui-builds@group.apple.com", header :contains "CC" "bondi-nonui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: bondi-Reports
+if anyof (header :contains "To" "bondi-reports@group.apple.com", header :contains "CC" "bondi-reports@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: boulder-UI Builds
+if anyof (header :contains "To" "boulder-ui-builds@group.apple.com", header :contains "CC" "boulder-ui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: boulder-SDK Builds
+if anyof (header :contains "To" "boulder-sdk@group.apple.com", header :contains "CC" "boulder-sdk@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: boulder-NonUI Builds
+if anyof (header :contains "To" "boulder-nonui-builds@group.apple.com", header :contains "CC" "boulder-nonui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: boulder-Reports
+if anyof (header :contains "To" "boulder-reports@group.apple.com", header :contains "CC" "boulder-reports@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: copper-UI Builds
+if anyof (header :contains "To" "copper-ui-builds@group.apple.com", header :contains "CC" "copper-ui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: copper-SDK Builds
+if anyof (header :contains "To" "copper-sdk@group.apple.com", header :contains "CC" "copper-sdk@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: copper-NonUI Builds
+if anyof (header :contains "To" "copper-nonui-builds@group.apple.com", header :contains "CC" "copper-nonui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: copper-Reports
+if anyof (header :contains "To" "copper-reports@group.apple.com", header :contains "CC" "copper-reports@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: donner-UI Builds
+if anyof (header :contains "To" "donner-ui-builds@group.apple.com", header :contains "CC" "donner-ui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: donner-SDK Builds
+if anyof (header :contains "To" "donner-sdk@group.apple.com", header :contains "CC" "donner-sdk@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: donner-NonUI Builds
+if anyof (header :contains "To" "donner-nonui-builds@group.apple.com", header :contains "CC" "donner-nonui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: donner-Reports
+if anyof (header :contains "To" "donner-reports@group.apple.com", header :contains "CC" "donner-reports@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: eagle-UI Builds
+if anyof (header :contains "To" "eagle-ui-builds@group.apple.com", header :contains "CC" "eagle-ui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: eagle-SDK Builds
+if anyof (header :contains "To" "eagle-sdk@group.apple.com", header :contains "CC" "eagle-sdk@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: eagle-NonUI Builds
+if anyof (header :contains "To" "eagle-nonui-builds@group.apple.com", header :contains "CC" "eagle-nonui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: eagle-Reports
+if anyof (header :contains "To" "eagle-reports@group.apple.com", header :contains "CC" "eagle-reports@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: monarch-UI Builds
+if anyof (header :contains "To" "monarch-ui-builds@group.apple.com", header :contains "CC" "monarch-ui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: monarch-SDK Builds
+if anyof (header :contains "To" "monarch-sdk@group.apple.com", header :contains "CC" "monarch-sdk@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: monarch-NonUI Builds
+if anyof (header :contains "To" "monarch-nonui-builds@group.apple.com", header :contains "CC" "monarch-nonui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: monarch-Reports
+if anyof (header :contains "To" "monarch-reports@group.apple.com", header :contains "CC" "monarch-reports@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: monarchtide-UI Builds
+if anyof (header :contains "To" "monarchtide-ui-builds@group.apple.com", header :contains "CC" "monarchtide-ui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: monarchtide-SDK Builds
+if anyof (header :contains "To" "monarchtide-sdk@group.apple.com", header :contains "CC" "monarchtide-sdk@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: monarchtide-NonUI Builds
+if anyof (header :contains "To" "monarchtide-nonui-builds@group.apple.com", header :contains "CC" "monarchtide-nonui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: monarchtide-Reports
+if anyof (header :contains "To" "monarchtide-reports@group.apple.com", header :contains "CC" "monarchtide-reports@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: okemo-UI Builds
+if anyof (header :contains "To" "okemo-ui-builds@group.apple.com", header :contains "CC" "okemo-ui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: okemo-SDK Builds
+if anyof (header :contains "To" "okemo-sdk@group.apple.com", header :contains "CC" "okemo-sdk@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: okemo-NonUI Builds
+if anyof (header :contains "To" "okemo-nonui-builds@group.apple.com", header :contains "CC" "okemo-nonui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: okemo-Reports
+if anyof (header :contains "To" "okemo-reports@group.apple.com", header :contains "CC" "okemo-reports@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: skihill-UI Builds
+if anyof (header :contains "To" "skihill-ui-builds@group.apple.com", header :contains "CC" "skihill-ui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: skihill-SDK Builds
+if anyof (header :contains "To" "skihill-sdk@group.apple.com", header :contains "CC" "skihill-sdk@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: skihill-NonUI Builds
+if anyof (header :contains "To" "skihill-nonui-builds@group.apple.com", header :contains "CC" "skihill-nonui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: skihill-Reports
+if anyof (header :contains "To" "skihill-reports@group.apple.com", header :contains "CC" "skihill-reports@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: tenaya-UI Builds
+if anyof (header :contains "To" "tenaya-ui-builds@group.apple.com", header :contains "CC" "tenaya-ui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: tenaya-SDK Builds
+if anyof (header :contains "To" "tenaya-sdk@group.apple.com", header :contains "CC" "tenaya-sdk@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: tenaya-NonUI Builds
+if anyof (header :contains "To" "tenaya-nonui-builds@group.apple.com", header :contains "CC" "tenaya-nonui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: tenaya-Reports
+if anyof (header :contains "To" "tenaya-reports@group.apple.com", header :contains "CC" "tenaya-reports@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: union-UI Builds
+if anyof (header :contains "To" "union-ui-builds@group.apple.com", header :contains "CC" "union-ui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: union-SDK Builds
+if anyof (header :contains "To" "union-sdk@group.apple.com", header :contains "CC" "union-sdk@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: union-NonUI Builds
+if anyof (header :contains "To" "union-nonui-builds@group.apple.com", header :contains "CC" "union-nonui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: union-Reports
+if anyof (header :contains "To" "union-reports@group.apple.com", header :contains "CC" "union-reports@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: whitetail-UI Builds
+if anyof (header :contains "To" "whitetail-ui-builds@group.apple.com", header :contains "CC" "whitetail-ui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: whitetail-SDK Builds
+if anyof (header :contains "To" "whitetail-sdk@group.apple.com", header :contains "CC" "whitetail-sdk@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: whitetail-NonUI Builds
+if anyof (header :contains "To" "whitetail-nonui-builds@group.apple.com", header :contains "CC" "whitetail-nonui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: whitetail-Reports
+if anyof (header :contains "To" "whitetail-reports@group.apple.com", header :contains "CC" "whitetail-reports@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: castlerock-UI Builds
+if anyof (header :contains "To" "castlerock-ui-builds@group.apple.com", header :contains "CC" "castlerock-ui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: castlerock-SDK Builds
+if anyof (header :contains "To" "castlerock-sdk@group.apple.com", header :contains "CC" "castlerock-sdk@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: castlerock-NonUI Builds
+if anyof (header :contains "To" "castlerock-nonui-builds@group.apple.com", header :contains "CC" "castlerock-nonui-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: castlerock-Reports
+if anyof (header :contains "To" "castlerock-reports@group.apple.com", header :contains "CC" "castlerock-reports@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: open-source-llvm-llvm-commits
+if anyof (header :contains "To" "llvm-commits@cs.uiuc.edu", header :contains "CC" "llvm-commits@cs.uiuc.edu") {
+    fileinto "LLVM Commits";
+    stop;
+}
+# Filter: open-source-llvm-llvm-dev
+if anyof (header :contains "To" "llvmdev@cs.uiuc.edu", header :contains "CC" "llvmdev@cs.uiuc.edu") {
+    fileinto "LLVM Dev";
+    stop;
+}
+# Filter: open-source-llvm-cfe-commits
+if anyof (header :contains "To" "cfe-commits@cs.uiuc.edu", header :contains "CC" "cfe-commits@cs.uiuc.edu") {
+    fileinto "Clang Commits";
+    stop;
+}
+# Filter: open-source-llvm-cfe-dev
+if anyof (header :contains "To" "cfe-dev@cs.uiuc.edu", header :contains "CC" "cfe-dev@cs.uiuc.edu") {
+    fileinto "Clang Dev";
+    stop;
+}
+# Filter: open-source-llvm-llvm-bugs
+if anyof (header :contains "To" "llvmbugs@cs.uiuc.edu", header :contains "CC" "llvmbugs@cs.uiuc.edu") {
+    fileinto "LLVM Bugs";
+    stop;
+}
+# Filter: apple-misc-lists-AuthKit Help
+if anyof (header :contains "To" "AuthKit-Help@group.apple.com", header :contains "CC" "AuthKit-Help@group.apple.com") {
+    fileinto "Lists";
+    stop;
+}
+# Filter: apple-misc-lists-Bondi Help
+if anyof (header :contains "To" "bondi-help@group.apple.com", header :contains "CC" "bondi-help@group.apple.com") {
+    fileinto "Lists";
+    stop;
+}
+# Filter: apple-misc-lists-Monarch Help
+if anyof (header :contains "To" "monarch-help@group.apple.com", header :contains "CC" "monarch-help@group.apple.com") {
+    fileinto "Lists";
+    stop;
+}
+# Filter: apple-misc-lists-Monarch Home
+if anyof (header :contains "To" "monarch-home@group.apple.com", header :contains "CC" "monarch-home@group.apple.com") {
+    fileinto "Lists";
+    stop;
+}
+# Filter: apple-misc-lists-Monarch Tide Help
+if anyof (header :contains "To" "monarchtide-help@group.apple.com", header :contains "CC" "monarchtide-help@group.apple.com") {
+    fileinto "Lists";
+    stop;
+}
+# Filter: apple-misc-lists-Purple Motion Dev
+if anyof (header :contains "To" "purple-motion-dev@group.apple.com", header :contains "CC" "purple-motion-dev@group.apple.com") {
+    fileinto "Lists";
+    stop;
+}
+# Filter: apple-misc-lists-Sandboxing Help
+if anyof (header :contains "To" "sandboxing-team@group.apple.com", header :contains "CC" "sandboxing-team@group.apple.com") {
+    fileinto "Lists";
+    stop;
+}
+# Filter: apple-misc-lists-Stowe Home
+if anyof (header :contains "To" "stowe-copper-home@group.apple.com", header :contains "CC" "stowe-copper-home@group.apple.com") {
+    fileinto "Lists";
+    stop;
+}
+# Filter: apple-misc-lists-Whitetail Help
+if anyof (header :contains "To" "whitetail-help@group.apple.com", header :contains "CC" "whitetail-help@group.apple.com") {
+    fileinto "Lists";
+    stop;
+}
+# Filter: apple-commits-apple-swift-commits
+if anyof (header :contains "To" "shiny-commits@group.apple.com", header :contains "CC" "shiny-commits@group.apple.com") {
+    fileinto "Solon";
+    stop;
+}
+# Filter: apple-commits-apple-llvm-git-commits
+if anyof (header :contains "To" "embedded-compiler-git-commits@group.apple.com", header :contains "CC" "embedded-compiler-git-commits@group.apple.com") {
+    fileinto "ECC Git Commits";
+    stop;
+}
+# Filter: apple-commits-apple-llvm-svn-commits
+if anyof (header :contains "To" "embedded-compiler-commits@group.apple.com", header :contains "CC" "embedded-compiler-commits@group.apple.com") {
+    fileinto "ECC Commits";
+    stop;
+}
+# Filter: apple-commits-apple-llvm-ecc
+if anyof (header :contains "To" "embedded-compiler-confidential@group.apple.com", header :contains "CC" "embedded-compiler-confidential@group.apple.com") {
+    fileinto "ECC";
+    stop;
+}
+# Filter: apple-commits-apple-llvm-test
+if anyof (header :contains "To" "dt-llvm-test@group.apple.com", header :contains "CC" "dt-llvm-test@group.apple.com") {
+    fileinto "LLVM Perf";
+    stop;
+}
+# Filter: apple-compiler-lists-Apple Clang Users
+if anyof (header :contains "To" "apple-clang-users@group.apple.com", header :contains "CC" "apple-clang-users@group.apple.com") {
+    fileinto "Apple Compiler Lists";
+    stop;
+}
+# Filter: apple-compiler-lists-Apple Swift Users
+if anyof (header :contains "To" "apple-swift-users@group.apple.com", header :contains "CC" "apple-swift-users@group.apple.com") {
+    fileinto "Apple Compiler Lists";
+    stop;
+}
+# Filter: apple-compiler-lists-Apple Compiler Group
+if anyof (header :contains "To" "compiler-group@group.apple.com", header :contains "CC" "compiler-group@group.apple.com") {
+    fileinto "ECC";
+    stop;
+}
+# Filter: apple-compiler-lists-Compiler Test Results
+if anyof (header :contains "To" "compiler-test-results@group.apple.com", header :contains "CC" "compiler-test-results@group.apple.com") {
+    fileinto "Compiler Test Results";
+    stop;
+}
+# Filter: apple-radar-radar
+if anyof (header :contains "From" "radar@apple.com") {
+    fileinto "Radar";
+    stop;
+}
+# Filter: apple-builds-AppleTV Copper Builds
+if anyof (header :contains "To" "AppleTV-builds-copper@group.apple.com", header :contains "CC" "AppleTV-builds-copper@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: apple-builds-Aspen iTunes
+if anyof (header :contains "To" "aspen-itunes-current@group.apple.com", header :contains "CC" "aspen-itunes-current@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: apple-builds-Bondi Remote NFA
+if anyof (header :contains "To" "bondi_remote_nfa@group.apple.com", header :contains "CC" "bondi_remote_nfa@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: apple-builds-CSG
+if anyof (header :contains "To" "csg@group.apple.com", header :contains "CC" "csg@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: apple-builds-CSG
+if anyof (header :contains "To" "seg-cad@group.apple.com", header :contains "CC" "seg-cad@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: apple-builds-DT Build Status
+if anyof (header :contains "To" "dt-build-status@group.apple.com", header :contains "CC" "dt-build-status@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: apple-builds-Ebuild
+if anyof (header :contains "To" "ebuild@group.apple.com", header :contains "CC" "ebuild@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+# Filter: apple-builds-Gala Builds
+if anyof (header :contains "To" "gala-builds@group.apple.com", header :contains "CC" "gala-builds@group.apple.com") {
+    fileinto "Builds";
+    stop;
+}
+
+

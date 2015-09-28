@@ -1,0 +1,1 @@
+for z in 0 1 2 3 4;  do $PWD/PerfTests_O &> $1.$z.log; done
