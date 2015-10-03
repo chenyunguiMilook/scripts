@@ -23,8 +23,11 @@ $PWD/buildbot_incremental_special_leaks/swift-macosx-x86_64/bin/PerfTests_Runtim
 $PWD/buildbot_incremental_special_leaks/swift-macosx-x86_64/bin/PerfTests_RuntimeLeaksRunner/PerfTests_Ounchecked
 
 echo "Running: #6"
-$PWD/swift/utils/build-script  --ios-all --tvos-all --watchos-all --test --validation-test --release --assertions -- --verbose-build=1 --build-ninja --build-swift-benchmarks=1 --skip-test-tvos --skip-test-watchos '--swift-sdks=OSX;IOS;IOS_SIMULATOR;TVOS;TVOS_SIMULATOR;WATCHOS;WATCHOS_SIMULATOR' --build-swift-static-stdlib=1 --compiler-vendor=apple --darwin-crash-reporter-client=0 --swift-stdlib-build-type=Debug --swift-stdlib-enable-assertions=true --skip-test-ios-device --skip-test-tvos-device --skip-test-watchos-device
+$PWD/swift/utils/build-script --ios-all --tvos-all --watchos-all --test --validation-test --release --assertions -- --verbose-build=1 --build-ninja --build-swift-benchmarks=1 --skip-test-tvos --skip-test-watchos '--swift-sdks=OSX;IOS;IOS_SIMULATOR;TVOS;TVOS_SIMULATOR;WATCHOS;WATCHOS_SIMULATOR' --build-swift-static-stdlib=1 --compiler-vendor=apple --darwin-crash-reporter-client=0 --swift-stdlib-build-type=Debug --swift-stdlib-enable-assertions=true --skip-test-ios-device --skip-test-tvos-device --skip-test-watchos-device
 
 echo "Running: #7"
 $PWD/swift/utils/build-script --ios-all --tvos-all --watchos-all --test --validation-test --release --assertions --test-optimized -- --verbose-build=1 --build-ninja --build-swift-benchmarks=1 --skip-test-tvos --skip-test-watchos '--swift-sdks=OSX;IOS;IOS_SIMULATOR;TVOS;TVOS_SIMULATOR;WATCHOS;WATCHOS_SIMULATOR' --build-swift-static-stdlib=1 --compiler-vendor=apple --darwin-crash-reporter-client=0  --swift-stdlib-build-type=RelWithDebInfo --swift-stdlib-enable-assertions=true --sil-verify-all --skip-test-ios-device --skip-test-tvos-device --skip-test-watchos-device
+
+echo "Running: #8"
+$PWD/swift/utils/build-script --ios-all --tvos-all --watchos-all --test --validation-test --release --assertions -- --verbose-build=1 --build-ninja --build-swift-benchmarks=1 --skip-test-tvos --skip-test-watchos '--swift-sdks=OSX;IOS;IOS_SIMULATOR;TVOS;TVOS_SIMULATOR;WATCHOS;WATCHOS_SIMULATOR' --build-swift-static-stdlib=1 --compiler-vendor=apple --darwin-crash-reporter-client=0  --swift-stdlib-build-type=RelWithDebInfo --swift-stdlib-enable-assertions=false --skip-test-ios-device --skip-test-tvos-device --skip-test-watchos-device
 
