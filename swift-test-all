@@ -17,17 +17,16 @@ echo "Running: #4"
 $PWD/swift/utils/build-script --ios-all --tvos-all --test --validation-test --build-subdir=buildbot_incremental_asan --release-debuginfo --assertions -- --reconfigure --verbose-build=1 --build-ninja --build-swift-benchmarks=1 --build-swift-static-stdlib=0 --compiler-vendor=apple --skip-build-ios --skip-test-ios --skip-build-tvos --skip-test-tvos --skip-build-watchos --skip-test-watchos --enable-asan
 
 echo "Running: #5"
-$PWD/swift/utils/build-script --release --assertions --build-subdir=buildbot_incremental_special_leaks -- --skip-ios --skip-tvos --skip-watchos --skip-test-osx --swift-stdlib-enable-assertions=false--reconfigure --verbose-build=1 --build-ninja --build-swift-benchmarks=1 --build-swift-static-stdlib=0 --compiler-vendor=apple --swift-runtime-enable-leak-checker=1
-$PWD/buildbot_incremental_special_leaks/swift-macosx-x86_64/bin/PerfTests_RuntimeLeaksRunner/PerfTests_O
-$PWD/buildbot_incremental_special_leaks/swift-macosx-x86_64/bin/PerfTests_RuntimeLeaksRunner/PerfTests_Onone
-$PWD/buildbot_incremental_special_leaks/swift-macosx-x86_64/bin/PerfTests_RuntimeLeaksRunner/PerfTests_Ounchecked
+$PWD/swift/utils/build-script --release --assertions --build-subdir=buildbot_incremental_special_leaks -- --skip-ios --skip-tvos --skip-watchos --skip-test-osx --swift-stdlib-enable-assertions=false--reconfigure --verbose-build=1 --build-ninja --build-swift-benchmarks=1 --build-swift-static-stdlib=0 --compiler-vendor=apple --swift-runtime-enable-leak-checker=1 >> 4.log 2>&1
+$PWD/build/buildbot_incremental_special_leaks/swift-macosx-x86_64/bin/PerfTests_RuntimeLeaksRunner >> 4.log 2>&1 
+$PWD/build/buildbot_incremental_special_leaks/swift-macosx-x86_64/bin/PerfTests_O >> 4.log 2>&1 
+$PWD/build/buildbot_incremental_special_leaks/swift-macosx-x86_64/bin/PerfTests_Onone >> 4.log 2>&1
+$PWD/build/buildbot_incremental_special_leaks/swift-macosx-x86_64/bin/PerfTests_Ounchecked >> 4.log 2>&1
 
 echo "Running: #6"
-$PWD/swift/utils/build-script --ios-all --tvos-all --watchos-all --test --validation-test --release --assertions -- --verbose-build=1 --build-ninja --build-swift-benchmarks=1 --skip-test-tvos --skip-test-watchos '--swift-sdks=OSX;IOS;IOS_SIMULATOR;TVOS;TVOS_SIMULATOR;WATCHOS;WATCHOS_SIMULATOR' --build-swift-static-stdlib=1 --compiler-vendor=apple --darwin-crash-reporter-client=0 --swift-stdlib-build-type=Debug --swift-stdlib-enable-assertions=true --skip-test-ios-device --skip-test-tvos-device --skip-test-watchos-device
-
-echo "Running: #7"
 $PWD/swift/utils/build-script --ios-all --tvos-all --watchos-all --test --validation-test --release --assertions --test-optimized -- --verbose-build=1 --build-ninja --build-swift-benchmarks=1 --skip-test-tvos --skip-test-watchos '--swift-sdks=OSX;IOS;IOS_SIMULATOR;TVOS;TVOS_SIMULATOR;WATCHOS;WATCHOS_SIMULATOR' --build-swift-static-stdlib=1 --compiler-vendor=apple --darwin-crash-reporter-client=0  --swift-stdlib-build-type=RelWithDebInfo --swift-stdlib-enable-assertions=true --sil-verify-all --skip-test-ios-device --skip-test-tvos-device --skip-test-watchos-device
 
-echo "Running: #8"
-$PWD/swift/utils/build-script --ios-all --tvos-all --watchos-all --test --validation-test --release --assertions -- --verbose-build=1 --build-ninja --build-swift-benchmarks=1 --skip-test-tvos --skip-test-watchos '--swift-sdks=OSX;IOS;IOS_SIMULATOR;TVOS;TVOS_SIMULATOR;WATCHOS;WATCHOS_SIMULATOR' --build-swift-static-stdlib=1 --compiler-vendor=apple --darwin-crash-reporter-client=0  --swift-stdlib-build-type=RelWithDebInfo --swift-stdlib-enable-assertions=false --skip-test-ios-device --skip-test-tvos-device --skip-test-watchos-device
+echo "Running: #7"
+$PWD/swift/utils/build-script --ios-all --tvos-all --watchos-all --test --validation-test --release --assertions -- --verbose-build=1 --build-ninja --build-swift-benchmarks=1 --skip-test-tvos --skip-test-watchos '--swift-sdks=OSX;IOS;IOS_SIMULATOR;TVOS;TVOS_SIMULATOR;WATCHOS;WATCHOS_SIMULATOR' --build-swift-static-stdlib=1 --compiler-vendor=apple --darwin-crash-reporter-client=0 --swift-stdlib-build-type=Debug --swift-stdlib-enable-assertions=true --skip-test-ios-device --skip-test-tvos-device --skip-test-watchos-device
+
 
