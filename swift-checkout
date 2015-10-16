@@ -1,7 +1,7 @@
 echo "checking out llvm ..."
-git clone -b swift-master ssh://git.apple.com/git/puzzlebox/llvm.git
+git clone -b swift-master ssh://git@stash.sd.apple.com/devtools/llvm.git
 echo "checking out clang ..."
-git clone -b swift-master ssh://git.apple.com/git/puzzlebox/clang.git
+git clone -b swift-master ssh://git@stash.sd.apple.com/devtools/clang.git
 echo "checking out swift ..."
 git clone ssh://git.apple.com/git/puzzlebox/swift.git
 cd swift
