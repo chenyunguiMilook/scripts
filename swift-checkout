@@ -1,16 +1,11 @@
 echo "checking out llvm ..."
-git clone -b swift-master ssh://git@stash.sd.apple.com/devtools/llvm.git
+git clone git@github.com:apple/swift-llvm.git
 echo "checking out clang ..."
-git clone -b swift-master ssh://git@stash.sd.apple.com/devtools/clang.git
+git clone git@github.com:apple/swift-clang.git
 echo "checking out swift ..."
-git clone ssh://git.apple.com/git/puzzlebox/swift.git
-cd swift
-git svn init svn+ssh://xin_tong@svn.apple.com/svn/klondike/shiny-project/shiny/trunk
-git config svn-remote.svn.fetch :refs/remotes/origin/master
-git svn rebase -l
-cd ..
+git clone git@github.com:apple/swift.git 
 echo "checking out swift performance test suite ..."
-git clone ssh://git.apple.com/git/puzzlebox/swift-test-suite.git swift/benchmark/PerfTestSuite
+git clone ssh://git@stash.sd.apple.com/devtools/swift-perf-test-suite.git swift/benchmark/PerfTestSuite
 echo "checking out cmark ..."
 git clone ssh://git@gitlab.sd.apple.com/devtech/cmark.git
 echo "checking out ninja ..."
