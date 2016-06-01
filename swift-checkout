@@ -1,12 +1,10 @@
 echo "checking out llvm ..."
-git clone git@github.com:apple/swift-llvm.git
+git clone git@github.com:apple/swift-llvm.git llvm
 echo "checking out clang ..."
-git clone git@github.com:apple/swift-clang.git
+git clone git@github.com:apple/swift-clang.git clang
 echo "checking out swift ..."
 git clone git@github.com:apple/swift.git 
-echo "checking out swift performance test suite ..."
-git clone ssh://git@stash.sd.apple.com/devtools/swift-perf-test-suite.git swift/benchmark/PerfTestSuite
 echo "checking out cmark ..."
-git clone ssh://git@gitlab.sd.apple.com/devtech/cmark.git
+git clone https://github.com/apple/swift-cmark.git cmark
 echo "checking out ninja ..."
-git clone ssh://git.apple.com/git/puzzlebox/ninja.git
+git clone ssh://xin_tong@git.apple.com/git/puzzlebox/ninja.git
